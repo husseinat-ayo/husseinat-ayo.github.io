@@ -538,9 +538,10 @@
     /* ── PROJECTS GRID ── */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1.75rem;
       margin-bottom: 3.5rem;
+      align-items: stretch;
     }
 
     .project-card {
@@ -550,6 +551,7 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      min-width: 0;
       transition: var(--transition);
     }
 
@@ -560,21 +562,28 @@
     }
 
     .project-image {
-      height: 200px;
       width: 100%;
-      background: #ede9fe;
+      aspect-ratio: 16 / 10;
+      background: #f3effb;
+      border-bottom: 1px solid var(--border);
       overflow: hidden;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .project-image img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      transition: transform 0.35s ease;
     }
 
     .project-card:hover .project-image img {
-      transform: scale(1.05);
+      transform: scale(1.02);
     }
 
     .project-content {
@@ -603,7 +612,7 @@
     }
 
     .project-content h3 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--text-dark);
       margin-bottom: 0.6rem;
@@ -806,7 +815,7 @@
 
   <!-- MOBILE TOP BAR HEADER -->
   <header class="mobile-header">
-    <a href="#" class="logo">[Your Name]</a>
+    <a href="#" class="logo">Abdulfatai Ayomide husseinat</a>
     <button class="mobile-toggle" id="menuToggle" aria-label="Toggle Menu">
       <i class="fas fa-bars"></i>
     </button>
@@ -870,8 +879,6 @@
 
           <p class="hero-bio">
             I turn raw and complex datasets into decision-ready insights, interactive dashboards, and predictive solutions. My work combines SQL, Python, Power BI and Excel to answer business questions, uncover patterns, and communicate findings clearly.
-
-Skills
           </p>
 
           <div class="hero-actions">
@@ -881,7 +888,7 @@ Skills
         </div>
 
         <div class="hero-image">
-          <img src="profile.png" alt="[Your Name]" onerror="this.src='https://via.placeholder.com/180/5b21b6/ffffff?text=Avatar';" />
+          <img src="profile.png" alt="Abdulfatai Ayomide Husseinat" onerror="this.src='https://via.placeholder.com/180/5b21b6/ffffff?text=Avatar';" />
         </div>
       </section>
 
@@ -902,15 +909,7 @@ Skills
             <p>Completed Work</p>
           </div>
         </div>
-
-       <!--  <div class="stat-card">
-          <div class="stat-icon"><i class="fas fa-toolbox"></i></div>
-          <div class="stat-info">
-            <h4>[Core Stack]</h4>
-            <p>Primary Tools</p>
-          </div>
-        </div> -->
-      </div>  
+      </div>
 
       <!-- WORK EXPERIENCE SECTION -->
       <section id="experience" class="reveal-section">
@@ -962,16 +961,16 @@ Skills
 
         <div class="projects-grid">
           <article class="project-card">
-            <div class="Dashboard.png">
-              <img src="Dashboard.png" alt="Strategic Insights into Car Sales Performance Pricing Dynamics" />
+            <div class="project-image">
+              <img src="Dashboard.png" alt="FinSight Finance Analysis Dashboard" />
             </div>
             <div class="project-content">
               <div class="project-tags">
-                <span>[Tool A]</span>
-                <span>[Tool B]</span>
+                <span>Power BI</span>
+                <span>Data Analysis</span>
               </div>
-              <h3>Strategic Insights into Car Sales Performance Pricing Dynamics</h3>
-              <p>An end-to-end data analytics and business intelligence solution designed to track, evaluate, and optimize vehicle pricing structures, inventory turnover metrics, and margin performance across regional dealerships.</p>
+              <h3>FinSight — Finance & Transaction Analysis</h3>
+              <p>Interactive financial analytics dashboard tracking total transaction volume, year-over-year performance trends, and monthly activity to support clearer financial reporting.</p>
               <a href="https://github.com/husseinat-ayo/FinSight" class="project-link" target="_blank" rel="noopener">
                 View Project <i class="fas fa-arrow-right"></i>
               </a>
@@ -979,16 +978,16 @@ Skills
           </article>
 
           <article class="project-card">
-            <div class="charts.png">
-              <img src="dashboard.png" alt="[Project 2 Title]" />
+            <div class="project-image">
+              <img src="dashboard.png" alt="Strategic Insights into Car Sales Performance Pricing Dynamics" />
             </div>
             <div class="project-content">
               <div class="project-tags">
-                <span>[Tool C]</span>
-                <span>[Tool D]</span>
+                <span>Power BI</span>
+                <span>Business Intelligence</span>
               </div>
-              <h3>[Project 2 Title]</h3>
-              <p>[Brief description of what you built, the problem it solved, and the result.]</p>
+              <h3>Strategic Insights into Car Sales Performance Pricing Dynamics</h3>
+              <p>An end-to-end data analytics and business intelligence solution designed to track, evaluate, and optimize vehicle pricing structures, inventory turnover metrics, and margin performance across regional dealerships.</p>
               <a href="https://github.com/husseinat-ayo/Strategic-Insights-into-Car-Sales-Performance-Pricing-Dynamics" class="project-link" target="_blank" rel="noopener">
                 View Project <i class="fas fa-arrow-right"></i>
               </a>
@@ -1018,11 +1017,11 @@ Skills
         </div>
 
         <div class="contact-grid">
-          <a href="mailto:[YOUR_EMAIL]" class="contact-item">
+          <a href="mailto:ayomidehusseinat@gmail.com" class="contact-item">
             <i class="fas fa-envelope"></i>
             <div class="contact-item-info">
               <span>Email</span>
-              <strong>[your.email@example.com]</strong>
+              <strong>ayomidehusseinat@gmail.com</strong>
             </div>
           </a>
 
@@ -1034,11 +1033,11 @@ Skills
             </div>
           </a>
 
-          <a href="[YOUR_GITHUB_URL]" class="contact-item" target="_blank" rel="noopener">
+          <a href="https://github.com/husseinat-ayo/" class="contact-item" target="_blank" rel="noopener">
             <i class="fab fa-github"></i>
             <div class="contact-item-info">
               <span>GitHub</span>
-              <strong>[github.com/your-handle]</strong>
+              <strong>github.com/husseinat-ayo</strong>
             </div>
           </a>
         </div>
@@ -1047,7 +1046,7 @@ Skills
     </main>
 
     <footer>
-      &copy; <span id="year"></span> [Your Name]. All rights reserved.
+      &copy; <span id="year"></span> Abdulfatai Ayomide husseinat. All rights reserved.
     </footer>
   </div>
 
